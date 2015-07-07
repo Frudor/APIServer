@@ -2,10 +2,9 @@
 ob_start();
 define("DEBUG", TRUE);
 
-// 1. define the default path for includes
-//define("APP_PATH", dirname(dirname(__FILE__)));
-
+// 1. define the default path for include
 define("APP_PATH", str_replace(DIRECTORY_SEPARATOR, "/", dirname(__FILE__)));
+define("CDN", "http://cdn.frudor.com");
 
 try {
     
@@ -55,7 +54,7 @@ try {
     // 7. load the Router class and provide the url + extension
     $router = new Framework\Router(array(
         "url" => isset($_GET["url"]) ? $_GET["url"] : "home/index",
-        "extension" => !empty($_GET["extension"]) ? $_GET["extension"] : "json"
+        "extension" => !empty($_GET["extension"]) ? $_GET["extension"] : "html"
     ));
     Framework\Registry::set("router", $router);
 
