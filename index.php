@@ -4,7 +4,7 @@ define("DEBUG", TRUE);
 
 // 1. define the default path for include
 define("APP_PATH", str_replace(DIRECTORY_SEPARATOR, "/", dirname(__FILE__)));
-define("CDN", "http://cdn.frudor.com");
+define("CDN", "http://cdn.frudor.com/");
 
 try {
     
